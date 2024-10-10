@@ -1,0 +1,29 @@
+# Xcode specific files
+build/
+*.xcworkspace
+xcuserdata/
+DerivedData/
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcuserstate
+
+# Swift Package Manager
+/.build
+Packages
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# User-specific files
+*.DS_Store
+
+# App specific
+*.ipa
+*.dSYM.zip
+*.dSYM
+
