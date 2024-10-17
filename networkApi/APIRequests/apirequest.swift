@@ -10,7 +10,7 @@ import Foundation
 struct APIRequest {
     let urlString = "https://jsonplaceholder.typicode.com/posts"
     
-    func fetchPosts(completion: @escaping ([PostStruct]?) -> Void) {
+    func fetch<T: Decodable>(completion: @escaping ([T]?) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(nil)
             return
@@ -22,8 +22,8 @@ struct APIRequest {
                 return
             }
             
-            let posts = try? JSONDecoder().decode([PostStruct].self, from: data)
-            completion(posts)
+            let decodedData = try? JSONDecoder().decode([T].self, from: data)
+            completion(decodedData)
         }.resume()
     }
 }
