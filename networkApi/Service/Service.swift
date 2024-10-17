@@ -1,5 +1,5 @@
 //
-//  apirequest.swift
+//  Service.swift
 //  networkApi
 //
 //  Created by Emil Maharramov on 10.10.24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct APIRequest {
+struct Service {
     let urlString = "https://jsonplaceholder.typicode.com/posts"
     
     func fetch<T: Decodable>(completion: @escaping ([T]?) -> Void) {

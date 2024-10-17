@@ -3,7 +3,7 @@ import Foundation
 
 class PostsViewModel {
     
-    private let apiRequest = APIRequest()
+    private let apiRequest = Service()
     var posts: [PostStruct] = []
     
     var didUpdatePosts: (() -> Void)?
